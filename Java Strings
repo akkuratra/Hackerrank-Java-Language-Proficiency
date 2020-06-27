@@ -1,0 +1,70 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        String Al = A.toLowerCase();
+        String Bl = B.toLowerCase();
+        System.out.println(Al.length()+Bl.length());
+        if(Al.compareTo(Bl)>0)
+        {
+            System.out.println("Yes");
+        }
+        else
+            System.out.println("No");
+        
+       /* char ch[] = Al.toCharArray(); 
+        for (int i = 0; i < Al.length(); i++) { 
+  
+            // If first character of a word is found 
+            if (i == 0 && ch[i] != ' ' ||  
+                ch[i] != ' ' && ch[i - 1] == ' ') { 
+  
+                // If it is in lower-case 
+                if (ch[i] >= 'a' && ch[i] <= 'z') { 
+  
+                    // Convert into Upper-case 
+                    ch[i] = (char)(ch[i] - 'a' + 'A'); 
+                } 
+            } 
+        }
+                    String st = new String(ch); 
+
+        char ch2[] = Bl.toCharArray(); 
+        for (int i = 0; i < Bl.length(); i++) { 
+  
+            // If first character of a word is found 
+            if (i == 0 && ch2[i] != ' ' ||  
+                ch2[i] != ' ' && ch2[i - 1] == ' ') { 
+  
+                // If it is in lower-case 
+                if (ch2[i] >= 'a' && ch2[i] <= 'z') { 
+  
+                    // Convert into Upper-case 
+                    ch2[i] = (char)(ch2[i] - 'a' + 'A'); 
+                } 
+            } 
+        }
+                    String st2 = new String(ch2); */
+    
+     String st= Al.substring(0, 1).toUpperCase() + Al.substring(1,Al.length()).toLowerCase();
+       String st2 = Bl.substring(0, 1).toUpperCase() + Bl.substring(1, Bl.length()).toLowerCase();
+        System.out.print(st+" "+st2);
+
+
+
+// print the string
+
+   
+        
+    }
+}
+
+
+
