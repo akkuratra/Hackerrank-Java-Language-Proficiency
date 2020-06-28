@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    public static String getSmallestAndLargest(String s, int k) {
+        String smallest = "";
+        String largest = "";
+        String[] arr= new String[s.length()];
+        for(int i=0; i<s.length();i++)
+        {
+            for(int j=i;j<s.length()+1;j++)
+            {
+                String s2=s.substring(i, j);
+                if(s2.length()==k)
+                {
+                    for(int si=0;si<s.length();si++)
+                    {
+                        arr[i]=s2;
+                    }
+                    //System.out.println(i+" "+j);
+                    break;
+                    
+                }
+            }
+            
+        }
+        smallest =arr[0];
+        largest =arr[0];
+         for(int si=1;arr[si]!=null;si++)
+        {
+            //System.out.println(arr[si]);
+            if(smallest.compareTo(arr[si])>=0){
+                smallest =arr[si];
+            }
+            if(arr[si].compareTo(largest)>=0)
+            {
+                largest= arr[si];
+            }
+        }
+
+        // Complete the function
+        // 'smallest' must be the lexicographically smallest substring of length 'k'
+        // 'largest' must be the lexicographically largest substring of length 'k'
+        
+        return smallest + "\n" + largest;
+    }
+
